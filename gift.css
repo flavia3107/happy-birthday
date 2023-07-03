@@ -2,6 +2,7 @@
 .svg-wrapper {
   height: 80%;
   margin: auto;
+ background-color: #4a4040;
 }
 
 .svg-wrapper svg {
