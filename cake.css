@@ -2,8 +2,9 @@
 
 #cake {
     display: block;
-    position: absolute;
-    margin: -842px auto 0 141px;
+    margin: -666px auto;
+    position: relative;
+    display: none;
 }
 
 /* ============================================== Candle
@@ -16,16 +17,13 @@
 .velas {
   background: #ffffff;
   border-radius: 10px;
-  position: relative;
-  top: -257px;
-  left: 50%;
   margin-left: -2.4px;
   margin-top: -8.33333333px;
   width: 5px;
   height: 35px;
   transform: translateY(-300px);
   backface-visibility: hidden;
-  animation: in 500ms 6s ease-out forwards;
+  display: none;
 }
 .velas:after,
 .velas:before {
@@ -44,6 +42,34 @@
   left: 0;
 }
 
+.candles-container{
+     display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: -257px;
+    left: 40%;
+    width: 120px;
+}
+
+#candle{
+      animation: in 500ms 3s ease-out forwards;
+}
+
+#candle1{
+  animation: in 500ms 3.5s ease-out forwards;
+
+}
+
+#candle2{
+  animation: in 500ms 4s ease-out forwards;
+
+}
+
+#candle3{
+  animation: in 500ms 4.5s ease-out forwards;
+
+}
+
 /* ============================================== Fire
 */
 
@@ -57,19 +83,19 @@
   height: 18px;
 }
 .fuego:nth-child(1) {
-  animation: fuego 2s 6.5s infinite;
+  animation: fuego 2s 5s infinite;
 }
 .fuego:nth-child(2) {
-  animation: fuego 1.5s 6.5s infinite;
+  animation: fuego 1.5s 5s infinite;
 }
 .fuego:nth-child(3) {
-  animation: fuego 1s 6.5s infinite;
+  animation: fuego 1s 5s infinite;
 }
 .fuego:nth-child(4) {
-  animation: fuego 0.5s 6.5s infinite;
+  animation: fuego 0.5s 5s infinite;
 }
 .fuego:nth-child(5) {
-  animation: fuego 0.2s 6.5s infinite;
+  animation: fuego 0.2s 5s infinite;
 }
 
 /* ============================================== Animation Fire
@@ -91,5 +117,11 @@
 @keyframes in {
   to {
     transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 500px){
+  .candles-container{
+        left: 36%;
   }
 }
