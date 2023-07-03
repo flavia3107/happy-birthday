@@ -54,8 +54,8 @@ document.addEventListener("DOMContentLoaded", function() {
       DEG_TO_RAD = PI / 180,
       RAD_TO_DEG = 180 / PI,
       colors = [
-        ["#df0049", "#660671"],
-        ["#00e857", "#005291"],
+        ["#ff87ae", "#d38e8e"],
+        ["#88ffb5", "#36b048"],
         ["#2bebbc", "#05798a"],
         ["#ffd200", "#b06c00"]
       ];

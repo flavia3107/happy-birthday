@@ -38,6 +38,37 @@ g.surprise-gift {
   animation: fadeOut 3.5s ease-out forwards;
 }
 
+#suprise-gift{
+ -webkit-animation-name: wiggle;
+   -webkit-animation-duration: 500ms;
+   -webkit-transform-origin: 50% 50%;
+    animation-iteration-count: 3; 
+}
+
+@-webkit-keyframes wiggle {
+   0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@-ms-keyframes wiggle {
+ 0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes wiggle {
+0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
 @keyframes fadeOut {
   0% { opacity: 1; }
   100% { opacity: 0; }

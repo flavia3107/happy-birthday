@@ -1,9 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic);
 
 #cake {
-  display: block;
-  position: relative;
-  margin: -5em auto 0 auto;
+    display: block;
+    position: absolute;
+    margin: -842px auto 0 141px;
 }
 
 /* ============================================== Candle
