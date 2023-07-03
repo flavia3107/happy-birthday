@@ -9,8 +9,13 @@ function openGift() {
     candle3.style.display = 'block';
     animation1.setAttribute('begin', '2s');
     var audio = new Audio('happy-birthday.mp3');
+
     setTimeout(() => {
-           audio.play(); 
-    }, 4500) 
+        container.style.visibility = 'visible';
+    }, 3500);
+
+    setTimeout(() => {
+        audio.play();
+    }, 4500);
 
 }

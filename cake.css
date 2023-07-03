@@ -49,6 +49,7 @@
     top: -257px;
     left: 40%;
     width: 120px;
+    visibility: hidden;
 }
 
 #candle{

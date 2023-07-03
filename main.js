@@ -7,5 +7,5 @@ const candle2 = document.getElementById('candle2');
 const candle3 = document.getElementById('candle3');
 const bdcake = document.getElementById('cake')
 const animation1 = document.getElementById('bizcocho_1');
-
+const container = document.getElementById('container');
 gift.addEventListener('click', openGift);
