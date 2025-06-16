@@ -1,14 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic);
-
-#cake {
-  display: block;
+#cake-container {
+  display: none;
   margin: -666px auto;
+  margin: -256px auto;
   position: relative;
-  display: none;
-}
-
-.bday-cake {
-  display: none;
+  width: 1.2rem;
 }
 
 .velas {
@@ -21,6 +16,7 @@
   transform: translateY(-300px);
   backface-visibility: hidden;
   display: none;
+  position: relative;
 }
 .velas:after,
 .velas:before {
@@ -49,22 +45,20 @@
   visibility: hidden;
 }
 
-#candle {
-  animation: in 500ms 3s ease-out forwards;
-}
-
-#candle1 {
-  animation: in 500ms 3.5s ease-out forwards;
-}
-
-#candle2 {
-  animation: in 500ms 4s ease-out forwards;
-}
-
+#candle,
+#candle1,
+#candle2,
 #candle3 {
-  animation: in 500ms 4.5s ease-out forwards;
+  opacity: 0;
+  transform: translateY(-300px);
 }
 
+/* 🔔 Candle animation trigger */
+.animate-candle {
+  animation: in 500ms ease-out forwards;
+}
+
+/* 🔥 Flames are off by default — added on click */
 .fuego {
   border-radius: 100%;
   position: absolute;
@@ -73,21 +67,34 @@
   margin-left: -2.6px;
   width: 6.66666667px;
   height: 18px;
+  opacity: 0;
 }
-.fuego:nth-child(1) {
-  animation: fuego 2s 5s infinite;
+
+/* 🔔 Flame animation trigger */
+.animate-flame:nth-child(1) {
+  animation: fuego 2s infinite;
+  animation-delay: 0s;
+  opacity: 1;
 }
-.fuego:nth-child(2) {
-  animation: fuego 1.5s 5s infinite;
+.animate-flame:nth-child(2) {
+  animation: fuego 1.5s infinite;
+  animation-delay: 0.1s;
+  opacity: 1;
 }
-.fuego:nth-child(3) {
-  animation: fuego 1s 5s infinite;
+.animate-flame:nth-child(3) {
+  animation: fuego 1s infinite;
+  animation-delay: 0.2s;
+  opacity: 1;
 }
-.fuego:nth-child(4) {
-  animation: fuego 0.5s 5s infinite;
+.animate-flame:nth-child(4) {
+  animation: fuego 0.5s infinite;
+  animation-delay: 0.3s;
+  opacity: 1;
 }
-.fuego:nth-child(5) {
-  animation: fuego 0.2s 5s infinite;
+.animate-flame:nth-child(5) {
+  animation: fuego 0.2s infinite;
+  animation-delay: 0.4s;
+  opacity: 1;
 }
 
 @keyframes fuego {
@@ -107,11 +114,106 @@
 @keyframes in {
   to {
     transform: translateY(0);
+    opacity: 1;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .candles-container {
     left: 36%;
+  }
+}
+
+.layer,
+.cream {
+  width: 100%;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.layer {
+  height: 0.12rem;
+  background-color: #a8867a;
+  border-radius: 4px;
+  margin-top: -2px;
+}
+
+.cream {
+  height: 0.09rem;
+  background-color: #8a6a5f;
+  border-radius: 4px;
+}
+
+.layer.visible,
+.cream.visible {
+  opacity: 1;
+  transform: scaleY(1);
+}
+
+@keyframes layer1 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes cream1 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes layer2 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes cream2 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes layer3 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes cream3 {
+  0% {
+    transform: scaleY(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scaleY(1);
+    opacity: 1;
   }
 }

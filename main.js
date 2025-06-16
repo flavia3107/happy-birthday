@@ -5,13 +5,12 @@ const candle = document.getElementById('candle');
 const candle1 = document.getElementById('candle1');
 const candle2 = document.getElementById('candle2');
 const candle3 = document.getElementById('candle3');
-const bdcake = document.getElementById('cake')
-const animation1 = document.getElementById('bizcocho_1');
+const bdcake = document.getElementById('cake-container')
 const container = document.getElementById('container');
 gift.addEventListener('click', openGift);
 
-
 function openGift() {
+	const audio = new Audio('happy-birthday.mp3');
 	gift.style.display = 'none';
 	confeti.style.display = 'block';
 	cake.style.display = 'block';
@@ -20,8 +19,20 @@ function openGift() {
 	candle1.style.display = 'block';
 	candle2.style.display = 'block';
 	candle3.style.display = 'block';
-	animation1.setAttribute('begin', '2s');
-	var audio = new Audio('happy-birthday.mp3');
+	const layers = document.querySelectorAll('.layer');
+	const creams = document.querySelectorAll('.cream');
+	let delay = 0;
+	for (let i = layers.length - 1; i >= 0; i--) {
+		setTimeout(() => {
+			layers[i].classList.add('visible');
+		}, delay);
+		delay += 500; // Delay for each subsequent layer
+
+		setTimeout(() => {
+			creams[i].classList.add('visible');
+		}, delay);
+		delay += 500; // Delay for each subsequent cream
+	}
 
 	setTimeout(() => {
 		container.style.visibility = 'visible';
@@ -31,4 +42,25 @@ function openGift() {
 		audio.play();
 	}, 4500);
 
+	setTimeout(() => {
+		candle.classList.add('animate-candle');
+	}, 3000);
+
+	setTimeout(() => {
+		candle1.classList.add('animate-candle');
+	}, 3500);
+
+	setTimeout(() => {
+		candle2.classList.add('animate-candle');
+	}, 4000);
+
+	setTimeout(() => {
+		candle3.classList.add('animate-candle');
+	}, 4500);
+
+	setTimeout(() => {
+		document.querySelectorAll('.fuego').forEach(el => {
+			el.classList.add('animate-flame');
+		});
+	}, 5000);
 }
