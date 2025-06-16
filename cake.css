@@ -1,17 +1,14 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:300italic);
 
 #cake {
-    display: block;
-    margin: -666px auto;
-    position: relative;
-    display: none;
+  display: block;
+  margin: -666px auto;
+  position: relative;
+  display: none;
 }
 
-/* ============================================== Candle
-*/
-
-.bday-cake{
-    display: none;
+.bday-cake {
+  display: none;
 }
 
 .velas {
@@ -42,37 +39,31 @@
   left: 0;
 }
 
-.candles-container{
-     display: flex;
-    justify-content: space-around;
-    position: relative;
-    top: -257px;
-    left: 40%;
-    width: 120px;
-    visibility: hidden;
+.candles-container {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  top: -257px;
+  left: 40%;
+  width: 120px;
+  visibility: hidden;
 }
 
-#candle{
-      animation: in 500ms 3s ease-out forwards;
+#candle {
+  animation: in 500ms 3s ease-out forwards;
 }
 
-#candle1{
+#candle1 {
   animation: in 500ms 3.5s ease-out forwards;
-
 }
 
-#candle2{
+#candle2 {
   animation: in 500ms 4s ease-out forwards;
-
 }
 
-#candle3{
+#candle3 {
   animation: in 500ms 4.5s ease-out forwards;
-
 }
-
-/* ============================================== Fire
-*/
 
 .fuego {
   border-radius: 100%;
@@ -99,11 +90,9 @@
   animation: fuego 0.2s 5s infinite;
 }
 
-/* ============================================== Animation Fire
-*/
-
 @keyframes fuego {
-  0%, 100% {
+  0%,
+  100% {
     background: rgba(254, 248, 97, 0.5);
     box-shadow: 0 0 40px 10px rgba(248, 233, 209, 0.2);
     transform: translateY(0) scale(1);
@@ -121,8 +110,8 @@
   }
 }
 
-@media only screen and (max-width: 500px){
-  .candles-container{
-        left: 36%;
+@media only screen and (max-width: 500px) {
+  .candles-container {
+    left: 36%;
   }
 }
