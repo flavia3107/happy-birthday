@@ -1,9 +1,16 @@
 #cake-container {
-  display: none;
-  margin: -666px auto;
   margin: -256px auto;
   position: relative;
-  width: 1.2rem;
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  flex-direction: column;
+}
+
+#bday-cake {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .velas {
@@ -40,7 +47,6 @@
   justify-content: space-around;
   position: relative;
   top: -257px;
-  left: 40%;
   width: 120px;
   visibility: hidden;
 }
@@ -118,30 +124,22 @@
   }
 }
 
-@media only screen and (max-width: 500px) {
-  .candles-container {
-    left: 36%;
-  }
-}
-
 .layer,
 .cream {
-  width: 100%;
+  width: 145px;
   opacity: 0;
-  transform: scaleY(0);
-  transform-origin: bottom;
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .layer {
-  height: 0.12rem;
+  height: 12px;
   background-color: #a8867a;
   border-radius: 4px;
   margin-top: -2px;
 }
 
 .cream {
-  height: 0.09rem;
+  height: 9px;
   background-color: #8a6a5f;
   border-radius: 4px;
 }
@@ -149,71 +147,58 @@
 .layer.visible,
 .cream.visible {
   opacity: 1;
-  transform: scaleY(1);
 }
 
 @keyframes layer1 {
   0% {
-    transform: scaleY(0);
     opacity: 0;
   }
   100% {
-    transform: scaleY(1);
     opacity: 1;
   }
 }
 
 @keyframes cream1 {
   0% {
-    transform: scaleY(0);
     opacity: 0;
   }
   100% {
-    transform: scaleY(1);
     opacity: 1;
   }
 }
 
 @keyframes layer2 {
   0% {
-    transform: scaleY(0);
     opacity: 0;
   }
   100% {
-    transform: scaleY(1);
     opacity: 1;
   }
 }
 
 @keyframes cream2 {
   0% {
-    transform: scaleY(0);
     opacity: 0;
   }
   100% {
-    transform: scaleY(1);
     opacity: 1;
   }
 }
 
 @keyframes layer3 {
   0% {
-    transform: scaleY(0);
     opacity: 0;
   }
   100% {
-    transform: scaleY(1);
     opacity: 1;
   }
 }
 
 @keyframes cream3 {
   0% {
-    transform: scaleY(0);
     opacity: 0;
   }
   100% {
-    transform: scaleY(1);
     opacity: 1;
   }
 }
