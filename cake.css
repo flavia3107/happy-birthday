@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Coiny");
 
 #cake-container {
-  margin: -256px auto;
+  margin: -525px auto;
   position: relative;
   width: 100%;
   display: flex !important;
@@ -49,7 +49,7 @@
   display: flex;
   justify-content: space-around;
   position: relative;
-  top: -257px;
+  top: -525px;
   width: 120px;
   visibility: hidden;
 }
@@ -208,8 +208,7 @@
 
 .happy-bday-text {
   font-family: "Coiny", cursive;
-  margin: 10%;
-  font-size: 134px;
+  font-size: 110px;
   text-align: center;
   display: none;
   color: #fff;
