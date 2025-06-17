@@ -1,15 +1,16 @@
-
 .svg-wrapper {
   height: 80%;
   margin: auto;
- background-color: #4a4040;
+  background-color: #433d3d78;
+  box-shadow: 0 0 20px 0px #d3d3d3;
+  border-radius: 55px;
 }
 
 .svg-wrapper svg {
   display: block;
-  width:auto;
-  height:80%;
-  margin:auto;   
+  width: auto;
+  height: 80%;
+  margin: auto;
   margin-top: 30%;
 }
 
@@ -20,7 +21,7 @@
 }
 
 g.surprise-gift {
-  filter: url('#product-dropshadow');
+  filter: url("#product-dropshadow");
 }
 
 .bg {
@@ -29,7 +30,7 @@ g.surprise-gift {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #FF9F43;
+  background-color: #ff9f43;
   z-index: -1;
   opacity: 0;
 }
@@ -38,38 +39,72 @@ g.surprise-gift {
   animation: fadeOut 3.5s ease-out forwards;
 }
 
-#suprise-gift{
- -webkit-animation-name: wiggle;
-   -webkit-animation-duration: 500ms;
-   -webkit-transform-origin: 50% 50%;
-    animation-iteration-count: 3; 
+#suprise-gift {
+  -webkit-animation-name: wiggle;
+  -webkit-animation-duration: 500ms;
+  -webkit-transform-origin: 50% 50%;
+  animation-iteration-count: 3;
 }
 
 @-webkit-keyframes wiggle {
-   0% { transform: rotate(0deg); }
-  25% { transform: rotate(5deg); }
-  50% { transform: rotate(0eg); }
-  75% { transform: rotate(-5deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @-ms-keyframes wiggle {
- 0% { transform: rotate(0deg); }
-  25% { transform: rotate(5deg); }
-  50% { transform: rotate(0eg); }
-  75% { transform: rotate(-5deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes wiggle {
-0% { transform: rotate(0deg); }
-  25% { transform: rotate(5deg); }
-  50% { transform: rotate(0eg); }
-  75% { transform: rotate(-5deg); }
-  100% { transform: rotate(0deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 @keyframes fadeOut {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
