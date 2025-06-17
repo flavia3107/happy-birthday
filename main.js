@@ -7,6 +7,9 @@ const candle2 = document.getElementById('candle2');
 const candle3 = document.getElementById('candle3');
 const bdcake = document.getElementById('cake-container')
 const container = document.getElementById('container');
+const bdtext = document.querySelector('.happy-bday-text')
+
+
 gift.addEventListener('click', openGift);
 
 function openGift() {
@@ -38,9 +41,9 @@ function openGift() {
 		container.style.visibility = 'visible';
 	}, 3500);
 
-	setTimeout(() => {
-		audio.play();
-	}, 4500);
+	// setTimeout(() => {
+	// 	audio.play();
+	// }, 4500);
 
 	setTimeout(() => {
 		candle.classList.add('animate-candle');
@@ -62,5 +65,6 @@ function openGift() {
 		document.querySelectorAll('.fuego').forEach(el => {
 			el.classList.add('animate-flame');
 		});
+		bdtext.style.display = 'inline-block';
 	}, 5000);
 }
