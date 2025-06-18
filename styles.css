@@ -30,3 +30,21 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+.flex-row {
+  display: flex;
+}
+
+.end {
+  justify-content: end;
+}
+
+.music-btn {
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  width: 55px;
+  display: none;
+  z-index: 3;
+}

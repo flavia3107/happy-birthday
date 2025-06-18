@@ -64,3 +64,9 @@ g.surprise-gift {
     max-width: 100%;
   }
 }
+
+@media only screen and (max-width: 520px) {
+  .svg-wrapper svg {
+    margin: 50% auto;
+  }
+}

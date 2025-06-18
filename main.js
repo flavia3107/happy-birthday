@@ -11,18 +11,25 @@ const bdtext = document.querySelector('.happy-bday-text');
 const svhWrapper = document.querySelector('.svg-wrapper');
 const bdayContent = document.querySelector('.bday-content');
 const cakeTop = document.querySelector('.cake-top');
+const musicButton = document.querySelector('#musicButton');
+const musicIcon = document.querySelector('#music-icon');
+const audio = new Audio('happy-birthday.mp3');
+
+let isPlaying = false;
 
 gift.addEventListener('click', openGift);
+musicButton.addEventListener('click', handleMusic)
 
 function openGift() {
-	const audio = new Audio('happy-birthday.mp3');
 	svhWrapper.style.display = gift.style.display = 'none';
 	bdayContent.style.display = bdcake.style.display = bdtext.style.display = cake.style.display = 'flex';
-	confeti.style.display = candle.style.display = candle1.style.display = 'block';
+	confeti.style.display = candle.style.display = candle1.style.display = musicButton.style.display = 'block';
 	candle2.style.display = candle3.style.display = 'block';
 	const layers = document.querySelectorAll('.layer');
 	const creams = document.querySelectorAll('.cream');
 	let delay = 0;
+	isPlaying = true;
+
 	for (let i = layers.length - 1; i >= 0; i--) {
 		setTimeout(() => {
 			layers[i].classList.add('visible');
@@ -64,4 +71,15 @@ function openGift() {
 		bdtext.style.visibility = 'visible';
 		bdtext.classList.add('active');
 	}, 5500);
+}
+
+function handleMusic() {
+	if (isPlaying) {
+		audio.pause();
+		musicIcon.src = 'music.svg'
+	} else {
+		audio.play();
+		musicIcon.src = 'music-off.svg'
+	}
+	isPlaying = !isPlaying;
 }
