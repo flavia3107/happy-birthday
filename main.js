@@ -21,7 +21,6 @@ function openGift() {
 	bdayContent.style.display = 'flex';
 	confeti.style.display = 'block';
 	bdtext.style.display = 'flex';
-
 	cake.style.display = 'block';
 	bdcake.style.display = 'block';
 	candle.style.display = 'block';
@@ -35,27 +34,20 @@ function openGift() {
 		setTimeout(() => {
 			layers[i].classList.add('visible');
 		}, delay);
-		delay += 500; // Delay for each subsequent layer
+		delay += 500;
 
 		setTimeout(() => {
 			creams[i].classList.add('visible');
 		}, delay);
-		delay += 500; // Delay for each subsequent cream
+		delay += 500;
 	}
-
-	setTimeout(() => {
-		container.style.visibility = 'visible';
-	}, 3500);
-
-	setTimeout(() => {
-		audio.play();
-	}, 4500);
 
 	setTimeout(() => {
 		candle.classList.add('animate-candle');
 	}, 3000);
 
 	setTimeout(() => {
+		container.style.visibility = 'visible';
 		candle1.classList.add('animate-candle');
 	}, 3500);
 
@@ -65,6 +57,7 @@ function openGift() {
 
 	setTimeout(() => {
 		candle3.classList.add('animate-candle');
+		audio.play();
 	}, 4500);
 
 	setTimeout(() => {
@@ -73,6 +66,5 @@ function openGift() {
 		});
 		bdtext.style.visibility = 'visible';
 		bdtext.classList.add('active');
-
 	}, 5000);
 }

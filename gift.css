@@ -52,10 +52,16 @@ g.surprise-gift {
 }
 
 #suprise-gift {
-  -webkit-animation-name: wiggle;
+  /* -webkit-animation-name: wiggle;
   -webkit-animation-duration: 500ms;
   -webkit-transform-origin: 50% 50%;
-  animation-iteration-count: 3;
+  animation-name: wiggle;
+  transform-origin: 50% 50%;
+  animation-duration: 500ms;
+  animation-iteration-count: infinite; */
+
+  animation: wiggle 3s infinite ease-in-out;
+  transform-origin: 50% 50%;
 }
 
 .bday-content {
@@ -63,54 +69,69 @@ g.surprise-gift {
 }
 
 @-webkit-keyframes wiggle {
-  0% {
+  0%,
+  20% {
     transform: rotate(0deg);
   }
-  25% {
-    transform: rotate(5deg);
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
   }
   50% {
-    transform: rotate(0eg);
+    transform: rotate(-10deg);
   }
-  75% {
-    transform: rotate(-5deg);
+  60% {
+    transform: rotate(10deg);
   }
+  70%,
   100% {
     transform: rotate(0deg);
   }
 }
 
 @-ms-keyframes wiggle {
-  0% {
+  0%,
+  20% {
     transform: rotate(0deg);
   }
-  25% {
-    transform: rotate(5deg);
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
   }
   50% {
-    transform: rotate(0eg);
+    transform: rotate(-10deg);
   }
-  75% {
-    transform: rotate(-5deg);
+  60% {
+    transform: rotate(10deg);
   }
+  70%,
   100% {
     transform: rotate(0deg);
   }
 }
 
 @keyframes wiggle {
-  0% {
+  0%,
+  20% {
     transform: rotate(0deg);
   }
-  25% {
-    transform: rotate(5deg);
+  30% {
+    transform: rotate(-10deg);
+  }
+  40% {
+    transform: rotate(10deg);
   }
   50% {
-    transform: rotate(0eg);
+    transform: rotate(-10deg);
   }
-  75% {
-    transform: rotate(-5deg);
+  60% {
+    transform: rotate(10deg);
   }
+  70%,
   100% {
     transform: rotate(0deg);
   }
