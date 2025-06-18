@@ -11,17 +11,13 @@ const bdtext = document.querySelector('.happy-bday-text');
 const svhWrapper = document.querySelector('.svg-wrapper');
 const bdayContent = document.querySelector('.bday-content');
 
-
 gift.addEventListener('click', openGift);
 
 function openGift() {
 	const audio = new Audio('happy-birthday.mp3');
-	svhWrapper.style.display = 'none';
-	gift.style.display = 'none';
-	bdayContent.style.display = 'flex';
+	svhWrapper.style.display = gift.style.display = 'none';
+	bdayContent.style.display = bdtext.style.display = cake.style.display = 'flex';
 	confeti.style.display = 'block';
-	bdtext.style.display = 'flex';
-	cake.style.display = 'block';
 	bdcake.style.display = 'block';
 	candle.style.display = 'block';
 	candle1.style.display = 'block';
