@@ -5,11 +5,17 @@
   width: 100%;
 }
 
+.bday-content {
+  height: 700px;
+  gap: 260px;
+}
+
 .happy-bday-text {
   font-family: "Coiny", cursive;
   font-size: 110px;
   text-align: center;
   display: none;
+  margin: 0;
   color: #fff;
   visibility: hidden;
   opacity: 0;
@@ -45,6 +51,16 @@
 .layer.visible,
 .cream.visible {
   opacity: 1;
+}
+
+.plate {
+  height: 3px;
+  background: #ffffff;
+  width: 165px;
+}
+
+.bday-content {
+  display: none;
 }
 
 @keyframes layer1 {
