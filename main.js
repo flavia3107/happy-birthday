@@ -5,17 +5,23 @@ const candle = document.getElementById('candle');
 const candle1 = document.getElementById('candle1');
 const candle2 = document.getElementById('candle2');
 const candle3 = document.getElementById('candle3');
-const bdcake = document.getElementById('cake-container')
+const bdcake = document.getElementById('cake-container');
 const container = document.getElementById('container');
-const bdtext = document.querySelector('.happy-bday-text')
+const bdtext = document.querySelector('.happy-bday-text');
+const svhWrapper = document.querySelector('.svg-wrapper');
+const bdayContent = document.querySelector('.bday-content');
 
 
 gift.addEventListener('click', openGift);
 
 function openGift() {
 	const audio = new Audio('happy-birthday.mp3');
+	svhWrapper.style.display = 'none';
 	gift.style.display = 'none';
+	bdayContent.style.display = 'flex';
 	confeti.style.display = 'block';
+	bdtext.style.display = 'inline-block';
+
 	cake.style.display = 'block';
 	bdcake.style.display = 'block';
 	candle.style.display = 'block';
@@ -41,9 +47,9 @@ function openGift() {
 		container.style.visibility = 'visible';
 	}, 3500);
 
-	// setTimeout(() => {
-	// 	audio.play();
-	// }, 4500);
+	setTimeout(() => {
+		audio.play();
+	}, 4500);
 
 	setTimeout(() => {
 		candle.classList.add('animate-candle');
@@ -65,6 +71,7 @@ function openGift() {
 		document.querySelectorAll('.fuego').forEach(el => {
 			el.classList.add('animate-flame');
 		});
-		bdtext.style.display = 'inline-block';
+		bdtext.style.visibility = 'visible';
+
 	}, 5000);
 }

@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Coiny");
 
 #cake-container {
-  margin: -525px auto;
+  margin: 200px auto;
   position: relative;
   width: 100%;
   display: flex !important;
@@ -9,8 +9,7 @@
   flex-direction: column;
 }
 
-#bday-cake,
-.bday-content {
+#bday-cake {
   display: flex !important;
   flex-direction: column;
   align-items: center;
@@ -49,7 +48,7 @@
   display: flex;
   justify-content: space-around;
   position: relative;
-  top: -525px;
+  top: 200px;
   width: 120px;
   visibility: hidden;
 }
@@ -212,4 +211,5 @@
   text-align: center;
   display: none;
   color: #fff;
+  visibility: hidden;
 }
