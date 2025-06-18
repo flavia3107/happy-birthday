@@ -13,6 +13,7 @@ const bdayContent = document.querySelector('.bday-content');
 const cakeTop = document.querySelector('.cake-top');
 const musicButton = document.querySelector('#musicButton');
 const musicIcon = document.querySelector('#music-icon');
+const btnText = document.querySelector('#text');
 const audio = new Audio('happy-birthday.mp3');
 
 let isPlaying = false;
@@ -23,12 +24,11 @@ musicButton.addEventListener('click', handleMusic)
 function openGift() {
 	svhWrapper.style.display = gift.style.display = 'none';
 	bdayContent.style.display = bdcake.style.display = bdtext.style.display = cake.style.display = 'flex';
-	confeti.style.display = candle.style.display = candle1.style.display = musicButton.style.display = 'block';
+	confeti.style.display = candle.style.display = candle1.style.display = 'block';
 	candle2.style.display = candle3.style.display = 'block';
 	const layers = document.querySelectorAll('.layer');
 	const creams = document.querySelectorAll('.cream');
 	let delay = 0;
-	isPlaying = true;
 
 	for (let i = layers.length - 1; i >= 0; i--) {
 		setTimeout(() => {
@@ -67,7 +67,9 @@ function openGift() {
 		document.querySelectorAll('.fuego').forEach(el => {
 			el.classList.add('animate-flame');
 		});
+		isPlaying = true;
 		audio.play();
+		musicButton.style.display = btnText.style.display = 'block';
 		bdtext.style.visibility = 'visible';
 		bdtext.classList.add('active');
 	}, 5500);
@@ -76,10 +78,12 @@ function openGift() {
 function handleMusic() {
 	if (isPlaying) {
 		audio.pause();
-		musicIcon.src = 'music.svg'
+		musicIcon.src = 'music.svg';
+		btnText.textContent = 'On';
 	} else {
 		audio.play();
-		musicIcon.src = 'music-off.svg'
+		musicIcon.src = 'music-off.svg';
+		btnText.textContent = 'Off';
 	}
 	isPlaying = !isPlaying;
 }

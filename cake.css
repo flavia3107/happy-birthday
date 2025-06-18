@@ -62,8 +62,18 @@
   width: 165px;
 }
 
-.bday-content {
+.bday-content,
+#text {
   display: none;
+}
+
+#text {
+  font-size: 15px;
+  margin-bottom: 2px;
+}
+
+.btn-container {
+  align-items: center;
 }
 
 .cake-top {
