@@ -20,7 +20,7 @@ function openGift() {
 	gift.style.display = 'none';
 	bdayContent.style.display = 'flex';
 	confeti.style.display = 'block';
-	bdtext.style.display = 'inline-block';
+	bdtext.style.display = 'flex';
 
 	cake.style.display = 'block';
 	bdcake.style.display = 'block';
@@ -72,6 +72,7 @@ function openGift() {
 			el.classList.add('animate-flame');
 		});
 		bdtext.style.visibility = 'visible';
+		bdtext.classList.add('active');
 
 	}, 5000);
 }

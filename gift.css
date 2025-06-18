@@ -7,12 +7,15 @@
   box-shadow: 0 0 20px 0px #d3d3d3;
   border-radius: 55px;
   max-width: 570px;
+  height: 700px;
 }
 
 .bday-content {
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 700px;
+  gap: 260px;
 }
 
 .svg-wrapper svg {

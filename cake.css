@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Coiny");
 
 #cake-container {
-  margin: 200px auto;
   position: relative;
   width: 100%;
   display: flex !important;
@@ -48,7 +47,6 @@
   display: flex;
   justify-content: space-around;
   position: relative;
-  top: 200px;
   width: 120px;
   visibility: hidden;
 }
@@ -212,4 +210,13 @@
   display: none;
   color: #fff;
   visibility: hidden;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* 🎬 Apply this class to trigger the animation */
+.happy-bday-text.active {
+  opacity: 1;
+  transform: translateY(0);
 }
