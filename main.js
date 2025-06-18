@@ -10,6 +10,7 @@ const container = document.getElementById('container');
 const bdtext = document.querySelector('.happy-bday-text');
 const svhWrapper = document.querySelector('.svg-wrapper');
 const bdayContent = document.querySelector('.bday-content');
+const cakeTop = document.querySelector('.cake-top');
 
 gift.addEventListener('click', openGift);
 
@@ -33,30 +34,34 @@ function openGift() {
 		}, delay);
 		delay += 500;
 	}
+	setTimeout(() => {
+		cakeTop.classList.add('visible');
+		cakeTop.style.visibility = 'visible';
+	}, 3000);
 
 	setTimeout(() => {
 		candle.classList.add('animate-candle');
-	}, 3000);
+	}, 3500);
 
 	setTimeout(() => {
 		container.style.visibility = 'visible';
 		candle1.classList.add('animate-candle');
-	}, 3500);
-
-	setTimeout(() => {
-		candle2.classList.add('animate-candle');
 	}, 4000);
 
 	setTimeout(() => {
-		candle3.classList.add('animate-candle');
-		audio.play();
+		candle2.classList.add('animate-candle');
 	}, 4500);
+
+	setTimeout(() => {
+		candle3.classList.add('animate-candle');
+	}, 5000);
 
 	setTimeout(() => {
 		document.querySelectorAll('.fuego').forEach(el => {
 			el.classList.add('animate-flame');
 		});
+		audio.play();
 		bdtext.style.visibility = 'visible';
 		bdtext.classList.add('active');
-	}, 5000);
+	}, 5500);
 }

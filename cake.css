@@ -12,7 +12,7 @@
 
 .happy-bday-text {
   font-family: "Coiny", cursive;
-  font-size: 110px;
+  font-size: clamp(65px, 18vw, 110px);
   text-align: center;
   display: none;
   margin: 0;
@@ -32,7 +32,8 @@
 .cream {
   width: 145px;
   opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.8s ease;
 }
 
 .layer {
@@ -49,8 +50,10 @@
 }
 
 .layer.visible,
-.cream.visible {
+.cream.visible,
+.cake-top.visible {
   opacity: 1;
+  transform: translateY(0);
 }
 
 .plate {
@@ -63,56 +66,109 @@
   display: none;
 }
 
-@keyframes layer1 {
+.cake-top {
+  background-color: #fff8f0;
+  height: 0px;
+  position: relative;
+  width: 152px;
+  z-index: 1;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.5s ease, transform 0.8s ease;
+}
+
+.drip {
+  position: absolute;
+  bottom: -14px;
+  left: 0;
+  width: 100%;
+  border-radius: 10px;
+  z-index: 1;
+}
+
+@keyframes cake-top {
   0% {
     opacity: 0;
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes layer1 {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes cream1 {
   0% {
     opacity: 0;
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes layer2 {
   0% {
     opacity: 0;
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes cream2 {
   0% {
     opacity: 0;
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes layer3 {
   0% {
     opacity: 0;
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @keyframes cream3 {
   0% {
     opacity: 0;
+    transform: translateY(-20px);
   }
   100% {
     opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 575px) {
+  section {
+    margin: auto;
+    width: 95%;
+  }
+  .happy-bday-text {
+    margin-top: 70px;
   }
 }
