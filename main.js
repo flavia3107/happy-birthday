@@ -1,12 +1,12 @@
-const confeti = document.getElementById('confetti');
-const gift = document.getElementById('suprise-gift');
-const cake = document.getElementById('bday-cake');
-const candle = document.getElementById('candle');
-const candle1 = document.getElementById('candle1');
-const candle2 = document.getElementById('candle2');
-const candle3 = document.getElementById('candle3');
-const bdcake = document.getElementById('cake-container');
-const container = document.getElementById('container');
+const confeti = document.querySelector('#confetti');
+const gift = document.querySelector('#suprise-gift');
+const cake = document.querySelector('#bday-cake');
+const candle = document.querySelector('#candle');
+const candle1 = document.querySelector('#candle1');
+const candle2 = document.querySelector('#candle2');
+const candle3 = document.querySelector('#candle3');
+const bdcake = document.querySelector('#cake-container');
+const container = document.querySelector('#container');
 const bdtext = document.querySelector('.happy-bday-text');
 const svhWrapper = document.querySelector('.svg-wrapper');
 const bdayContent = document.querySelector('.bday-content');
@@ -18,17 +18,15 @@ const audio = new Audio('happy-birthday.mp3');
 
 let isPlaying = false;
 
-gift.addEventListener('click', openGift);
-musicButton.addEventListener('click', handleMusic)
-
 function openGift() {
+	const layers = document.querySelectorAll('.layer');
+	const creams = document.querySelectorAll('.cream');
+	let delay = 0;
+
 	svhWrapper.style.display = gift.style.display = 'none';
 	bdayContent.style.display = bdcake.style.display = bdtext.style.display = cake.style.display = 'flex';
 	confeti.style.display = candle.style.display = candle1.style.display = 'block';
 	candle2.style.display = candle3.style.display = 'block';
-	const layers = document.querySelectorAll('.layer');
-	const creams = document.querySelectorAll('.cream');
-	let delay = 0;
 
 	for (let i = layers.length - 1; i >= 0; i--) {
 		setTimeout(() => {
@@ -87,3 +85,6 @@ function handleMusic() {
 	}
 	isPlaying = !isPlaying;
 }
+
+gift.addEventListener('click', openGift);
+musicButton.addEventListener('click', handleMusic)
